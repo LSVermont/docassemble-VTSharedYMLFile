@@ -1,13 +1,17 @@
-#Need to look at this again and use proper code for templates of text that is used a lot
+# Here are some common code blocks and settings and templates that may get used in all our interviews. Do NOT use it with the RFA interview yet as I've stripped out RFA-specific text below.
 
+#####CSS#####
 ---
 features:
   css: style.css
-###I'd like to finalize VTCourtFormsBranding package and use that
+###I'd like to finalize VTCourtFormsBranding package and use that for all interviews instead
 ---
-# customized feedback form
+#####Feedback form#####
+# use our customized feedback form
 code: |   
   feedback_form = "docassemble.VTFeedback:VTfeedback.yml"
+---
+#####Courts#####
 ---
 objects:
   - all_courts: ALCourtLoader.using(file_name='courts_list.xlsx')
@@ -16,20 +20,13 @@ code: |
   trial_court = all_courts.as_court('trial_court', trial_court_index)
   trial_court.geolocate()  
 ---
+#####Use ALKiln#####
 metadata:
   # Added this so ALKiln tests will run
   post: |
     <div data-variable="${ encode_name(str( user_info().variable )) }" id="trigger" aria-hidden="true" style="display: none;"></div>
 ---
-event: edit_answers_screen
-id: edit answers screen
-question: |
-  Edit your answers
-subquestion: |
-  ${ action_button_html(url_action('review_RFApackage'), label='Edit answers', color='info') }
-  
-  Remember to come back to this screen to continue.
-continue button field: RFApackage_preview_question
+#####General settings#####
 ---
 code: |
   AL_ORGANIZATION_TITLE = "VTCourtForms"
@@ -70,6 +67,7 @@ code: |
       },
   )
 ---
+#####Intro screen - first screen of interview#####
 id: basic questions intro screen
 question: |
   **${interview_short_title} in Vermont**
@@ -85,11 +83,11 @@ subquestion: |
   <p>You will need to mail, email, efile or deliver them to the court on your own. VTCourtForms will give you instructions.</p>
   </div>  
   
-  <i class="fas fa-file-text fa-2x"></i> This guided interview will produce a complete package of 4 forms needed to ask the court for a Relief from Abuse (RFA) order in Vermont: the Complaint, Affidavit, Confidential Notification form and Protection Order Service Information form. Learn more about RFA orders and this interview on the next screen.
+  <i class="fas fa-file-text fa-2x"></i> This guided interview will produce 
   
-  <i class="fas fa-clock fa-2x"></i> It may take you over 1 hour to complete this interview. Make sure you are in a safe place.
+  <i class="fas fa-clock fa-2x"></i> It may take you xx minutes to complete this interview. 
   
-  <i class="fas fa-circle-info fa-2x"></i> It is free to use this program. This site is not a lawyer. Visit our [VTLawHelp.org website](https://vtlawhelp.org/roadmap/relief-from-abuse/step-1) for more information about Relief from Abuse orders.
+  <i class="fas fa-circle-info fa-2x"></i> It is free to use this program. This site is not a lawyer. Visit our [VTLawHelp.org website](https://vtlawhelp.org) for legal information.
   
   VTCourtForms was created by Legal Services Vermont with support from the Legal Services Corporation and assistance from the Suffolk University Legal Innovation and Technology (LIT) Lab Document Assembly Line Project. We also had help from Vermont Legal Aid, Vermont Judiciary and other Vermont organizations.
   
@@ -106,47 +104,16 @@ fields:
       minlength: |
         You cannot continue unless you agree to the terms of use.        
 continue button field: al_intro_screen  
-
-
-
-
-#######Templates#####
+---
+#######Template for required fields explanation#####
 ---
 template: asterisk
 subject: |
   Required fields <span style="color:red;">*</span><br/>
 content: |
   A red star / asterisk <span style="color:red;">*</span> means you need to answer this question before you can move on.
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-#####Custom error messages and emails#####
----
-# customized the error message people get when they encounter a bug in the interview
-code: |
-  al_custom_error_options = [
-    "Use the [original PDF versions](https://vtlawhelp.org/roadmap/relief-from-abuse/step-3) of these forms instead.",
-    "Visit [VTLawHelp.org](https://vtlawhelp.org) to find legal help.",
-    "Get court forms and basic info about court forms and the court process. Reach out to the [Vermont Judiciary's ARC.](https://www.vermontjudiciary.org/self-help/ARC)",
-  ]
----
 
-
-
-
-
-
-
-
-
+#####Choose a court#####
 ---
 id: choose a court
 question: |
@@ -164,10 +131,7 @@ fields:
       Not sure what county? [Check this list of cities and towns to find the county.](https://en.m.wikipedia.org/wiki/List_of_municipalities_in_Vermont#Cities)
   - County: trial_court_index
     code: all_courts._load_courts()['address_county'].items()
-    
-
-
-
+--- 
 #####About the user#####
 ---
 id: your birthdate question
@@ -214,7 +178,6 @@ fields:
   - Zip or postal code: users[0].mailing_address.zip
     required: False
     show if: users_mailing_address_different
-
 ---
 id: Gather users contact information
 question: |
@@ -237,7 +200,7 @@ validation code: |
       (not showifdef('users[0].email')) and \
       (not showifdef('users1_work_phone_number'))):
     validation_error(word("You need to provide at least one contact method."), field="users[0].other_contact_method")
-
+---
 #####About the defendant#####
 ---
 id: gather defendants phone numbers
@@ -286,39 +249,24 @@ fields:
        **Tap Next to choose how to sign your documents.**
      show if: attestation
 ---
-id: preview RFApackage
-question: |
-  Preview your forms before you sign them
-subquestion: |
-  Here is a preview of the forms you will sign on the next page.   
-  
-  ${ al_user_bundle.as_pdf(key='preview') }
-
-  Click the image to open it in a new tab. Click the "Edit your answers" button
-  to edit your answers.
-
-  ${ action_button_html(url_action('review_RFApackage'), label='Edit your answers', color='info') }
-  
-  **Remember to come back to this screen to tap Next and sign your form.**
-continue button field: RFApackage_preview_question    
+######################### Review Screen ######################
 ---
-code: |
-  signature_fields = ['users[0].signature']
----
-######################### REVIEW SCREEN ######################
-id: review screen
-
-template: |
+template: review_screen_instructions
+content: |
   Edit your answers here. Choose the section(s) that you want to edit. When you are done, scroll to the bottom and select "Resume."
-
-template: |  
+---
+template: review_screen_attestation_reminder
+content: |
       Required attestation on your affidavit: "I declare that my statements are true and accurate to the best of my knowledge and belief. I understand that if my statements are false, I will be subject to the penalty of perjury or to other sanctions in the discretion of the court."
-      
+---
+template: review_screen_select_resume_will_take_moment
+content: |      
       **Select Resume, below, when you are done. It will take a moment to generate your forms again.**
-     
-
-####################### DOWNLOAD #######################
-template: |
+---     
+####################### Download #######################
+---
+template: download_screen_instructions
+content: |
   The interview is done. Your forms are ready to view.
   
   Select the "Edit your answers" button to fix any mistakes. Then, **download your forms and the instructions sheet** for the next steps to take. You can also **print them** or **email them** to yourself or someone else, too.
@@ -328,10 +276,9 @@ template: |
   * creating a free account so you can save your answers and come back later. At any time choose "sign up" in the Menu above, or "register" below.
   
   * using the Share feature to share a link to your interview with a trusted person. **Important**: If you use the Share feature, that person will be able to see AND change your answers.
-  
-  * working with an advocate from the [Vermont Network](https://www.vtnetwork.org/get-help/) to create a safety plan or to get advice and support during the RFA process.
-  
-template: |  
+---
+template: download_screen_bottom_instructions
+content: |
   IMPORTANT: Now is the time to download the documents, email or print them, or make a free account to save them. **This tool does not send your forms to the court.** 
 ---
 template: not_seeing_email
@@ -488,4 +435,14 @@ content: |
 
   <p style="font-size:18px;font-family:arial,helvetica neue,helvetica,sans-serif;">Note: Please do not reply to this email address. It does not accept emails.</p>
 
+---
+#####Custom error messages and emails#####
+---
+# customized the error message people get when they encounter a bug in the interview
+code: |
+  al_custom_error_options = [
+    "Use the [original PDF versions](https://vtlawhelp.org/roadmap/relief-from-abuse/step-3) of these forms instead.",
+    "Visit [VTLawHelp.org](https://vtlawhelp.org) to find legal help.",
+    "Get court forms and basic info about court forms and the court process. Reach out to the [Vermont Judiciary's ARC.](https://www.vermontjudiciary.org/self-help/ARC)",
+  ]
 ---
