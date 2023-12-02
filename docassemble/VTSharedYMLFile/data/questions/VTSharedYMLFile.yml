@@ -222,6 +222,12 @@ fields:
     datatype: al_international_phone
     required: False    
 ---
+#####Note for after last question#####
+---
+template: after_last_question_we_will_generate_your_forms
+content: |
+      **We're ready to generate your draft forms so you can review them!** It will take a moment after you tap the Next button. 
+---
 #####Attestation and signature#####
 ---
 id: Signing your forms
