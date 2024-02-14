@@ -120,8 +120,8 @@ content: |
 ---
 template: intro_vtcourtforms_created_by
 content: |
-  VTCourtForms was created by Legal Services Vermont with support from the Legal Services Corporation and assistance from the Suffolk University Legal Innovation and Technology (LIT) Lab Document Assembly Line Project. We also had help from Vermont Legal Aid, Vermont Judiciary and other Vermont organizations.
-  
+  <p>VTCourtForms was created by Legal Services Vermont with support from the Legal Services Corporation and assistance from the Suffolk University Legal Innovation and Technology (LIT) Lab Document Assembly Line Project. We also had help from Vermont Legal Aid, Vermont Judiciary and other Vermont organizations.</p>
+
   [FILE big_logo, 30%, Legal Services Vermont]
 ---
 #######Template for required fields explanation#####
