@@ -131,7 +131,17 @@ subject: |
   Required fields <span style="color:red;">*</span><br/>
 content: |
   A red star / asterisk <span style="color:red;">*</span> means you need to answer this question before you can move on.
-
+---
+#####Intro about ow you can edit your answers#####
+template: intro_how_to_edit_answers
+content: |
+  
+  Keep in mind, you can edit your answers after you preview the finished forms. You can also do that anytime by choosing Edit Your Answers in the Menu at the top-right of the page.
+  
+  You can also go to the Menu and quickly Exit and Delete Your Answers if you need to. And, you may choose to make a free account so you can store your answers online and come back to them later.
+  
+  Let's get started.
+---
 #####Choose a court#####
 ---
 id: choose a court
