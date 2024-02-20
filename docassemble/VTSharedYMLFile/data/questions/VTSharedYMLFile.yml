@@ -131,7 +131,17 @@ subject: |
   Required fields <span style="color:red;">*</span><br/>
 content: |
   A red star / asterisk <span style="color:red;">*</span> means you need to answer this question before you can move on.
-
+---
+#####Intro about how you can edit your answers#####
+template: intro_how_to_edit_answers
+content: |
+  
+  Keep in mind, you can edit your answers after you preview the finished forms. You can also do that anytime by choosing Edit Your Answers in the Menu at the top-right of the page.
+  
+  You can also go to the Menu and quickly Exit and Delete Your Answers if you need to. And, you may choose to make a free account so you can store your answers online and come back to them later.
+  
+  Let's get started.
+---
 #####Choose a court#####
 ---
 id: choose a court
@@ -286,9 +296,13 @@ content: |
 ---
 template: review_screen_select_resume_will_take_moment
 content: |      
-      **Select Resume, below, when you are done. It will take a moment to generate your forms again.**
+      **Select Resume, below, when you are done. It will take a moment to generate your form(s) again.**
 ---     
 ####################### Download #######################
+---
+template: download_screen_instructions_headline
+content: |
+  Review your forms and download and/or print them
 ---
 template: download_screen_instructions
 content: |
@@ -327,9 +341,6 @@ content: |
 # customized About this form screen accessed from footer
 template: about_this_interview_version_info
 content: |
-  % if all_variables(special='metadata').get('help_page_title','').rstrip() and all_variables(special='metadata').get('help_page_url','').rstrip():
-  Learn more: [${ all_variables(special='metadata').get('help_page_title','').rstrip() }](${ all_variables(special='metadata').get('help_page_url','').rstrip() }).
-  % endif
 
   "${all_variables(special='metadata').get('title','').rstrip()}" version 
   `${ package_version_number }`; AssemblyLine version `${ al_version }`.
@@ -362,6 +373,9 @@ content: |
   [View the paper version of this form or these forms](${ ORIGINAL_FORMS[0] }).
   % endif
   
+  % if all_variables(special='metadata').get('help_page_title','').rstrip() and all_variables(special='metadata').get('help_page_url','').rstrip():
+  Learn more: [${ all_variables(special='metadata').get('help_page_title','').rstrip() }](${ all_variables(special='metadata').get('help_page_url','').rstrip() }).
+  % endif  
   
   This VTCourtForms guided interview was created by Legal Services Vermont, a nonprofit legal aid organization serving the state of Vermont. We had support from the Legal Services Corporation and assistance from the Suffolk University Legal Innovation and Technology (LIT) Lab Document Assembly Line Project. We also had help from Vermont Legal Aid, Vermont Judiciary and other Vermont organizations.
   
@@ -472,7 +486,7 @@ content: |
 ---
 #####Custom error messages and emails#####
 ---
-# customized the error message people get when they encounter a bug in the interview
+# customized error message people get when they encounter a bug in the interview
 code: |
   al_custom_error_options = [
     "Use the [original PDF versions](https://vtlawhelp.org/roadmap/relief-from-abuse/step-3) of these forms instead.",
