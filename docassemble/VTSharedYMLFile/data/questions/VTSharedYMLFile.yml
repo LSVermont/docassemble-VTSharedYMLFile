@@ -290,6 +290,10 @@ content: |
 ---     
 ####################### Download #######################
 ---
+template: download_screen_instructions_headline
+content: |
+  Review your forms and download and/or print them
+---
 template: download_screen_instructions
 content: |
   The interview is done. Your forms are ready to view.
