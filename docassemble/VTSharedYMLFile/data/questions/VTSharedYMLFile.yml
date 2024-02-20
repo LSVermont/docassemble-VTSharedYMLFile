@@ -132,7 +132,7 @@ subject: |
 content: |
   A red star / asterisk <span style="color:red;">*</span> means you need to answer this question before you can move on.
 ---
-#####Intro about ow you can edit your answers#####
+#####Intro about how you can edit your answers#####
 template: intro_how_to_edit_answers
 content: |
   
