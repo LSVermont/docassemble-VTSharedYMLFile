@@ -299,6 +299,34 @@ fields:
        **Tap Next to choose how to sign your documents.**
      show if: attestation
 ---
+######Some family-related templates######
+template: what_is_legal_parental_rights
+subject: |
+  What is legal responsibility?
+content: |
+  Legal responsibility is who has the right to make major decisions about the child’s life. The major decisions tend to be about religion, education, medical care and travel outside of Vermont. Learn more on [VTLawHelp.org](https://vtlawhelp.org/custody-visitation).
+---
+template: what_is_physical_parental_rights
+subject: |
+  What is physical responsibility?
+content: |
+  Physical responsibility means who has the responsibility to provide routine daily care and control of the child and to make day-to-day decisions. Where the child physically lives is included in physical responsibility. Learn more on [VTLawHelp.org](https://vtlawhelp.org/custody-visitation).
+---
+template: what_is_parent_child_contact
+subject: |
+  What is parent-child contact?
+content: |
+  In Vermont, the courts call visitation "parent-child contact." If you want the child to live with you, be sure to also check parent-child for yourself. Generally, the courts prefer that children can spend as much time as possible with both of their parents. Learn more on [VTLawHelp.org](https://vtlawhelp.org/custody-visitation).
+---
+template: what_is_child_medical_and_maintenance_support
+subject: |
+  What do these mean?
+content: |
+  * Child support -- It is paid by one parent to the other for the support of children. Parents who are able to are expected to support their children.
+  * Medical support -- Money for child medical care.
+  * Maintenance supplement -- Money to correct a difference in the finances of the parents. This can happen if the court thinks the children will have a lower standard of living while living with one parent as compared to the other.
+---
+
 ######################### Review Screen ######################
 ---
 template: review_screen_instructions
