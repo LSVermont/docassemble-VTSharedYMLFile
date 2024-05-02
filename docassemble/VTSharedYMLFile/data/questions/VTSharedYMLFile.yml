@@ -266,7 +266,7 @@ fields:
     datatype: al_international_phone
     required: False    
 ---
-#####Note for after last question#####
+#####Note for after last question final screen#####
 ---
 template: after_last_question_we_will_generate_your_forms
 content: |
@@ -361,7 +361,7 @@ content: |
 ---
 template: download_screen_bottom_instructions
 content: |
-  IMPORTANT: Now is the time to download the documents, email or print them, or make a free account to save them. **This tool does not send your forms to the court.** 
+  IMPORTANT: Now is the time to download the documents, email or print them, or make a free account to save them. **This tool does not send your forms to the court.** You must file these forms with the court.
 ---
 template: not_seeing_email
 subject: |
