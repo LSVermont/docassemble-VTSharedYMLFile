@@ -14,7 +14,6 @@ code: |
 ---
 objects:
   - all_courts: ALCourtLoader.using(file_name='courts_list.xlsx')
-  - county_list: ALCourtLoader.using(file_name='courts_list.xlsx')
 ---
 code: |
   trial_court = all_courts.as_court('trial_court', trial_court_index)
