@@ -5,7 +5,8 @@
     padding-left: 4rem;
 }
 /* This below eliminates the dotted underline for green collapse template text  */
-.al_collapse_template .al_toggle {
+.al_collapse_template a.al_toggle,
+.al_display_template a.al_toggle {
     color: #3b842c;
     text-decoration-line: underline;
 }
