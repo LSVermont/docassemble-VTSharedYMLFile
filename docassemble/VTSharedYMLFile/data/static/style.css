@@ -1,11 +1,14 @@
-/* This below is trying to indent "show if" subquestions on certain pages */
+/* This below is used to indent "show if" subquestions on certain pages */
 .indent-me-container {
     background-color: #fff;
     margin-left: 3rem;
     padding-left: 4rem;
 }
-
-
+/* This below eliminates the dotted underline for green collapse template text  */
+.al_collapse_template .al_toggle {
+    color: #3b842c;
+    text-decoration-line: underline;
+}
 .bg-dark {
   background-color: #1f455c !important;  /* nav bar color */
 }

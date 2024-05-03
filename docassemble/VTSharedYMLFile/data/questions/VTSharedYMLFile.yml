@@ -127,9 +127,9 @@ content: |
 ---
 template: asterisk
 subject: |
-  Required fields <span style="color:red;">*</span><br/>
+  Required fields <span style="color:#E60000;">*</span><br/>
 content: |
-  A red star / asterisk <span style="color:red;">*</span> means you need to answer this question before you can move on.
+  A red star / asterisk <span style="color:#E60000;">*</span> means you need to answer this question before you can move on.
 ---
 #####Intro about how you can edit your answers#####
 template: intro_how_to_edit_answers
