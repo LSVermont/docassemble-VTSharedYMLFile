@@ -8,6 +8,7 @@
 .al_collapse_template a.al_toggle,
 .al_display_template a.al_toggle {
     color: #3b842c;
+    text-decoration: none;
     text-decoration-line: underline;
 }
 .bg-dark {
