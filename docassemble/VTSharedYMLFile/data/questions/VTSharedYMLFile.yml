@@ -319,14 +319,16 @@ content: |
   In Vermont, “parent-child contact” refers to the time the child spends with each parent. This is sometimes called parent-time or visitation. Generally, the courts prefer that children can spend as much time as possible with both of their parents. 
 
   Check “Parent-child contact for myself” if:
+  
   - you want the child to live with you, **or**
   - you want to have the right to spend time with your child/children.
 
   Check “Parent-child contact for ${ other_parties[0] }” if:
+  
   - you want the child to live with ${ other_parties[0] }, **or**
   - you want ${ other_parties[0] } to have the right to spend time with your child/children.
 
-  You will have the chance to explain more about what you want –- or what you and ${ other_parties[0] } have agreed on –- in other divorce forms. Learn more on [VTLawHelp.org](https://vtlawhelp.org/custody-visitation).
+  You will have the chance to explain more about what you want -- or what you and ${ other_parties[0] } have agreed on -- in other divorce forms. Learn more on [VTLawHelp.org](https://vtlawhelp.org/custody-visitation).
 ---
 template: what_is_child_medical_and_maintenance_support
 subject: |
