@@ -320,12 +320,12 @@ content: |
 
   Check “Parent-child contact for myself” if:
   
-  - you want the child to live with you, **or**
+  - you want the child/children to live with you, **or**
   - you want to have the right to spend time with your child/children.
 
   Check “Parent-child contact for ${ other_parties[0] }” if:
   
-  - you want the child to live with ${ other_parties[0] }, **or**
+  - you want the child/children to live with ${ other_parties[0] }, **or**
   - you want ${ other_parties[0] } to have the right to spend time with your child/children.
 
   You will have the chance to explain more about what you want -- or what you and ${ other_parties[0] } have agreed on -- in other divorce forms. Learn more on [VTLawHelp.org](https://vtlawhelp.org/custody-visitation).
