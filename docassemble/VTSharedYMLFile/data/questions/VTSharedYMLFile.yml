@@ -374,6 +374,8 @@ content: |
 template: download_screen_bottom_instructions
 content: |
   IMPORTANT: Now is the time to download the documents, email or print them, or make a free account to save them. **This tool does not send your forms to the court.** You must file these forms with the court.
+  
+  Be sure to look at the Next Steps document. It tells you what to do next.
 ---
 template: not_seeing_email
 subject: |
