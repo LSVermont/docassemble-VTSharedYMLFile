@@ -31,7 +31,7 @@ code: |
   AL_ORGANIZATION_TITLE = "VTCourtForms"
 ---
 code: |
-  AL_ORGANIZATION_HOMEPAGE = "https://vtlawhelp.org/vtcourtforms"
+  AL_ORGANIZATION_HOMEPAGE = "https://apps.vtcourtforms.org/run/menu/#/1"
 ---
 objects:
   - al_logo: DAStaticFile.using(filename="LSV_bug.png")
