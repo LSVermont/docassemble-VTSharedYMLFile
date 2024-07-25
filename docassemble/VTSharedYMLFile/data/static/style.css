@@ -1,3 +1,13 @@
+/* This below is just for the VTCourtFormsRootPage */
+.article_title {
+  font-weight: bold;
+  font-size: 130%;
+  text-align: center;
+  color: #861e36;
+}
+.btn-da-custom svg { 
+  height: 2.5em !important;
+}
 /* This below is used to indent "show if" subquestions on certain pages */
 .indent-me-container {
     background-color: #fff;
