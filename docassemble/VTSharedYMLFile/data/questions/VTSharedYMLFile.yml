@@ -19,8 +19,10 @@ code: |
   trial_court = all_courts.as_court('trial_court', trial_court_index)
   trial_court.geolocate()  
 ---
-#####Use ALKiln#####
+#####Metadata and ALKiln#####
 metadata:
+  title url: |
+    https://apps.vtcourtforms.org/run/menu/#/1
   # Added this so ALKiln tests will run
   post: |
     <div data-variable="${ encode_name(str( user_info().variable )) }" id="trigger" aria-hidden="true" style="display: none;"></div>
