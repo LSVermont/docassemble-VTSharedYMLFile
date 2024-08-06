@@ -129,9 +129,9 @@ content: |
 ---
 template: asterisk
 subject: |
-  Required fields <span style="color:#E60000;">*</span><br/>
+  Required fields <span style="color:#e11717;">*</span><br/>
 content: |
-  A red star / asterisk <span style="color:#E60000;">*</span> means you need to answer this question before you can move on.
+  A red star / asterisk <span style="color:#e11717;">*</span> means you need to answer this question before you can move on.
 ---
 #####Intro about how you can edit your answers#####
 template: intro_how_to_edit_answers
@@ -223,7 +223,7 @@ id: Gather users contact information
 question: |
   What is your contact information?
 subquestion: |
-  Include at least **one safe way**<span style="color:red;">*</span> to reach you other than by mail. You can use a friend's phone number, if that is the safest way to reach you.
+  Include at least **one safe way**<span style="color:e11717;">*</span> to reach you other than by mail. You can use a friend's phone number, if that is the safest way to reach you.
 #  ${ collapse_template(why_contact_info_needed_template) }
 fields:  
   - Phone number: users[0].phone_number
