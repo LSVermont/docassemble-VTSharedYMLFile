@@ -361,11 +361,27 @@ template: download_screen_instructions_headline
 content: |
   Review your forms and download and/or print them
 ---
+template: download_screen_instructions_headline_one_form
+content: |
+  Review your form and download and/or print it
+---
 template: download_screen_instructions
 content: |
   The interview is done. Your forms are ready to view.
   
   Select the "Edit your answers" button to fix any mistakes. Then, **download your forms and the instructions sheet** for the next steps to take. You can also **print them** or **email them** to yourself or someone else, too.
+  
+  Consider:
+  
+  * creating a free account so you can save your answers and come back later. At any time choose "sign up" in the Menu above, or "register" below.
+  
+  * using the Share feature at the bottom of the screen to share a link to your interview with a trusted person. **Important**: If you use the Share feature, that person will be able to see AND change your answers.
+---
+template: download_screen_instructions_one_form
+content: |
+  The interview is done. Your form is ready to view.
+  
+  Select the "Edit your answers" button to fix any mistakes. Then, **download your form and the instructions sheet** for the next steps to take. You can also **print them** or **email them** to yourself or someone else, too.
   
   Consider:
   
