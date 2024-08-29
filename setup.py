@@ -54,7 +54,7 @@ setup(name='docassemble.VTSharedYMLFile',
       url='https://docassemble.org',
       packages=find_packages(),
       namespace_packages=['docassemble'],
-      install_requires=['docassemble.ALToolbox>=0.11.0', 'docassemble.AssemblyLine>=3.0.1'],
+      install_requires=['docassemble.ALToolbox>=0.11.1', 'docassemble.AssemblyLine>=3.1.0'],
       zip_safe=False,
       package_data=find_package_data(where='docassemble/VTSharedYMLFile/', package='docassemble.VTSharedYMLFile'),
      )
