@@ -86,7 +86,7 @@ subquestion: |
   
   <i class="fas fa-file-text fa-2x"></i> This tool will produce 
   
-  <i class="fas fa-clock fa-2x"></i> It may take you xx minutes to complete this interview. 
+  <i class="fas fa-clock fa-2x"></i> It may take you xx minutes to complete this. 
   
   <i class="fas fa-circle-info fa-2x"></i> It is free to use this program. This site is not a lawyer. Visit our [VTLawHelp.org website](https://vtlawhelp.org) for legal information.
   
@@ -377,7 +377,7 @@ content: |
 ---
 template: download_screen_instructions
 content: |
-  The interview is done. Your forms are ready to view.
+  You have completed all the questions. Your forms are ready to view.
   
   Select the "Edit your answers" button to fix any mistakes. Then, **download your forms and the instructions sheet** for the next steps to take. You can also **print them** or **email them** to yourself or someone else, too.
   
@@ -385,11 +385,11 @@ content: |
   
   * creating a free account so you can save your answers and come back later. At any time choose "sign up" in the Menu above, or "register" below.
   
-  * using the Share feature at the bottom of the screen to share a link to your interview with a trusted person. **Important**: If you use the Share feature, that person will be able to see AND change your answers.
+  * using the Share feature at the bottom of the screen to share a link to your answers with a trusted person. **Important**: If you use the Share feature, that person will be able to see AND change your answers.
 ---
 template: download_screen_instructions_one_form
 content: |
-  The interview is done. Your form is ready to view.
+  You have completed all the questions. Your form is ready to view.
   
   Select the "Edit your answers" button to fix any mistakes. Then, **download your form and the instructions sheet** for the next steps to take. You can also **print them** or **email them** to yourself or someone else, too.
   
@@ -397,7 +397,7 @@ content: |
   
   * creating a free account so you can save your answers and come back later. At any time choose "sign up" in the Menu above, or "register" below.
   
-  * using the Share feature at the bottom of the screen to share a link to your interview with a trusted person. **Important**: If you use the Share feature, that person will be able to see AND change your answers.
+  * using the Share feature at the bottom of the screen to share a link to your answers with a trusted person. **Important**: If you use the Share feature, that person will be able to see AND change your answers.
 ---
 template: download_screen_bottom_instructions
 content: |
@@ -462,7 +462,7 @@ content: |
   Learn more: [${ all_variables(special='metadata').get('help_page_title','').rstrip() }](${ all_variables(special='metadata').get('help_page_url','').rstrip() }).
   % endif  
   
-  This VTCourtForms guided interview was created by Legal Services Vermont, a nonprofit legal aid organization serving the state of Vermont. We had support from the Legal Services Corporation and assistance from the Suffolk University Legal Innovation and Technology (LIT) Lab Document Assembly Line Project. We also had help from Vermont Legal Aid, Vermont Judiciary and other Vermont organizations.
+  VTCourtForms was created by Legal Services Vermont, a nonprofit legal aid organization serving the state of Vermont. We had support from the Legal Services Corporation and assistance from the Suffolk University Legal Innovation and Technology (LIT) Lab Document Assembly Line Project. We also had help from Vermont Legal Aid, Vermont Judiciary and other Vermont organizations.
   
   Learn more about [VTCourtForms](https://vtlawhelp.org/vtcourtforms), including the terms of use and privacy information.
   
@@ -474,7 +474,7 @@ content: |
   
   * You might also consider clearing your browsing history. [Learn more about online safety.](https://vtlawhelp.org/vtcourtforms#safety)
   
-  This guided interview was built with docassemble and includes code from the [Document Assembly Line project](https://suffolklitlab.org/docassemble-AssemblyLine-documentation/docs/).
+  This tool was built with docassemble and includes code from the [Document Assembly Line project](https://suffolklitlab.org/docassemble-AssemblyLine-documentation/docs/).
   
     [:fab-fa-github: View the code on GitHub](https://github.com/LSVermont).  
 ---
