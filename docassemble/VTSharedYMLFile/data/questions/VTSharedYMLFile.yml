@@ -160,7 +160,7 @@ subject: |
   Not sure which county to pick?
 content: |
   * If you already have a court case in progress, select the county that is listed on your court papers.
-  * If you aren’t sure where to file, check for advice on [VTLawHelp.org](https://vtlawhelp.org/family), call your [local courthouse](https://www.vermontjudiciary.org/court-locations), contact the [Vermont Judiciary Access Resource Center](https://www.vermontjudiciary.org/self-help/ARC), or contact [Legal Services Vermont](https://vtlawhelp.org/how-we-can-help).
+  * If you aren’t sure where to file, check for advice on [VTLawHelp.org](https://vtlawhelp.org), call your [local courthouse](https://www.vermontjudiciary.org/court-locations), contact the [Vermont Judiciary Access Resource Center](https://www.vermontjudiciary.org/self-help/ARC), or contact [Legal Services Vermont](https://vtlawhelp.org/how-we-can-help).
 ---
 id: choose a court
 question: |
@@ -589,7 +589,6 @@ content: |
 # customized error message people get when they encounter a bug in the interview
 code: |
   al_custom_error_options = [
-    "Use the [original PDF versions](https://vtlawhelp.org/roadmap/relief-from-abuse/step-3) of these forms instead.",
     "Visit [VTLawHelp.org](https://vtlawhelp.org) to find legal help.",
     "Get court forms and basic info about court forms and the court process. Reach out to the [Vermont Judiciary's ARC.](https://www.vermontjudiciary.org/self-help/ARC)",
   ]
