@@ -2,7 +2,7 @@
 /* This below is to make color contrast more accessible and increase font size in footer */
 .dafooter a {
     color: #0256D4;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 .nav-link.dropdown-toggle:hover, nav-link.dropdown-toggle:visited {
