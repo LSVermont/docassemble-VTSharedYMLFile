@@ -155,29 +155,18 @@ content: |
   * If you do not have children, you could file in the county your marital home resides in.
   * If you aren’t sure where to file, check for advice on [VTLawHelp.org](https://vtlawhelp.org/family), call your [local courthouse](https://www.vermontjudiciary.org/court-locations), contact the [Vermont Judiciary Access Resource Center](https://www.vermontjudiciary.org/self-help/ARC), or contact [Legal Services Vermont](https://vtlawhelp.org/how-we-can-help).
 ---
-template: which_county
+template: which_county_to_choose
 subject: |
   Not sure which county to pick?
 content: |
   * If you already have a court case in progress, select the county that is listed on your court papers.
   * If you aren’t sure where to file, check for advice on [VTLawHelp.org](https://vtlawhelp.org), call your [local courthouse](https://www.vermontjudiciary.org/court-locations), contact the [Vermont Judiciary Access Resource Center](https://www.vermontjudiciary.org/self-help/ARC), or contact [Legal Services Vermont](https://vtlawhelp.org/how-we-can-help).
 ---
-id: choose a court
-question: |
-  Choose a Family Court
-fields:
-  - note: |
-      Choose the county where you will file your forms. 
-      
-      It can be:
-      
-      * A, or
-      * B, or
-      * C.
-      
-      Not sure what county? [Check this list of cities and towns to find the county.](https://en.m.wikipedia.org/wiki/List_of_municipalities_in_Vermont#Cities)
-  - County: trial_court_index
-    code: all_courts._load_courts()['address_county'].items()
+template: in_which_county
+subject: |
+  Not sure what county you are in?
+content: |
+  [Check this list of Vermont cities and towns to find the county.](https://en.m.wikipedia.org/wiki/List_of_municipalities_in_Vermont#Cities)
 --- 
 template: types_of_cases_in_each_court_division
 subject: |
