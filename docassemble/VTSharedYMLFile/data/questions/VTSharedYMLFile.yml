@@ -155,6 +155,13 @@ content: |
   * If you do not have children, you could file in the county your marital home resides in.
   * If you aren’t sure where to file, check for advice on [VTLawHelp.org](https://vtlawhelp.org/family), call your [local courthouse](https://www.vermontjudiciary.org/court-locations), contact the [Vermont Judiciary Access Resource Center](https://www.vermontjudiciary.org/self-help/ARC), or contact [Legal Services Vermont](https://vtlawhelp.org/how-we-can-help).
 ---
+template: which_county
+subject: |
+  Not sure which county to pick?
+content: |
+  * If you already have a court case in progress, select the county that is listed on your court papers.
+  * If you aren’t sure where to file, check for advice on [VTLawHelp.org](https://vtlawhelp.org/family), call your [local courthouse](https://www.vermontjudiciary.org/court-locations), contact the [Vermont Judiciary Access Resource Center](https://www.vermontjudiciary.org/self-help/ARC), or contact [Legal Services Vermont](https://vtlawhelp.org/how-we-can-help).
+---
 id: choose a court
 question: |
   Choose a Family Court
@@ -420,6 +427,14 @@ content: |
   * Or choose "Exit and Delete My Answers" from the Menu to erase your answers completely. Then close your web browser. 
   
   * You might also consider clearing your browsing history. [Learn more about online safety.](https://vtlawhelp.org/vtcourtforms#safety)
+---
+#######Template for car truck value#####
+---
+template: vehicle_value
+subject: |
+  Don't know the value of your vehicle?
+content: |
+  For vehicles, you could look up the value on the Kelley Blue Book, Edmunds or NADA websites.
 ---
 #####About page#####
 ---
