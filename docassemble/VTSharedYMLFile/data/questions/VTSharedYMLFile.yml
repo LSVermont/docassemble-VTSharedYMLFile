@@ -173,9 +173,12 @@ template: types_of_cases_in_each_court_division
 subject: |
   What kinds of cases are handled in these divisions?
 content: |
-  - The Civil Division includes eviction and small claims cases. 
-  - The Family Division includes divorce, legal separation and parentage cases. 
-  - The Probate Division includes estates, guardianship and name change cases.
+  - The Civil Division includes eviction and small claims cases.
+  - The Criminal Division determines the guilt or innocence of a person charged with a crime.
+  - The Environmental Division handles environmental law cases.
+  - The Family Division includes divorce, legal separation and parentage cases.
+  - The Judicial Bureau handles civil violations, including those having to do with traffic, municipal ordinances, hunting, alcohol and tobacco.
+  - The Probate Division includes wills, estates, guardianship and name change cases.
 
   [Learn more about the Vermont Court Divisions.](https://www.vermontjudiciary.org/court-divisions)
 ---
