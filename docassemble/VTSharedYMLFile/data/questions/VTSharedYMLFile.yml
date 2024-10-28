@@ -5,6 +5,9 @@
 features:
   css: style.css
 ---
+modules:
+  - docassemble.demo.accordion
+---
 #####Feedback form#####
 # use our customized feedback form
 code: |   
