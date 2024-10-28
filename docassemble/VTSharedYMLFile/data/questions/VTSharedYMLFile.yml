@@ -11,6 +11,7 @@ code: |
   feedback_form = "docassemble.VTFeedback:VTfeedback.yml"
 ---
 #####Courts#####
+#The default is to use courts_list.xlsx (it includes only family courts). However, in the Fee Waiver interview, we use courts_list_full.xlsx (it includes all divisions). Both files are stored here.
 ---
 objects:
   - all_courts: ALCourtLoader.using(file_name='courts_list.xlsx')
