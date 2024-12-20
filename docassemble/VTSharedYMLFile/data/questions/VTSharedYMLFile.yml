@@ -72,36 +72,6 @@ code: |
       },
   )
 ---
-#####Intro screen - first screen of interview#####
-id: basic questions intro screen
-question: |
-  **${interview_short_title} in Vermont**
-subquestion: |  
-  
-
-  
-  <i class="fas fa-file-text fa-2x"></i> This tool will produce 
-  
-  <i class="fas fa-clock fa-2x"></i> It may take you xx minutes to complete this. 
-  
-  <i class="fas fa-circle-info fa-2x"></i> It is free to use this program. This site is not a lawyer. Visit our [VTLawHelp.org website](https://vtlawhelp.org) for legal information.
-  
-  VTCourtForms was created by Legal Services Vermont with support from the Legal Services Corporation and assistance from the Suffolk University Legal Innovation and Technology (LIT) Lab Document Assembly Line Project. We also had help from Vermont Legal Aid, Vermont Judiciary and other Vermont organizations.
-  
-  [FILE big_logo, 30%, Legal Services Vermont]
-
-fields:
-  - To continue, please accept our [terms of use](https://vtlawhelp.org/vtcourtforms/terms-of-use).: acknowledged_information_use
-    datatype: checkboxes
-    none of the above: False    
-    minlength: 1
-    choices:
-      - I accept the terms of use.
-    validation messages:
-      minlength: |
-        You cannot continue unless you agree to the terms of use.        
-continue button field: al_intro_screen  
----
 #######Templates for intro screen#####
 template: intro_vtcourtforms_3_steps
 content: |
