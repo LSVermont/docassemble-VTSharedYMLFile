@@ -58,20 +58,6 @@ code: |
   github_repo_name = 'VTCourtFormsIssues'
   github_user_name = 'VTCourtFormsIssues'
 ---
-comment: |
-  This block includes the logic for standalone interviews.
-  Delete mandatory: True to include in another interview
-mandatory: True
-code: |
-  # Store anonymous data for analytics / statistics
-  store_variables_snapshot(
-      persistent=True,
-      data={
-          "zip": showifdef("users[0].address.zip"),
-          "reached_interview_end": True,
-      },
-  )
----
 #######Templates for intro screen#####
 template: intro_vtcourtforms_3_steps
 content: |
