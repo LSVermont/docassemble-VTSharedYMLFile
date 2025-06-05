@@ -53,7 +53,7 @@ setup(name='docassemble.VTSharedYMLFile',
       license='The MIT License (MIT)',
       url='https://docassemble.org',
       packages=find_namespace_packages(),
-      install_requires=['docassemble.ALToolbox>=0.11.1', 'docassemble.AssemblyLine>=3.2.0', 'docassemble.demo>=1.6.1'],
+      install_requires=['docassemble.ALToolbox>=0.11.1', 'docassemble.AssemblyLine>=3.2.0', 'docassemble.demo>=1.6.2'],
       zip_safe=False,
       package_data=find_package_data(where='docassemble/VTSharedYMLFile/', package='docassemble.VTSharedYMLFile'),
      )
