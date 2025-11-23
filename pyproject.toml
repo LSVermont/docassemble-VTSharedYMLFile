@@ -21,7 +21,6 @@ license-files = [
     "LICENSE",
 ]
 
-
 [project.urls]
 Homepage = "https://docassemble.org"
 
