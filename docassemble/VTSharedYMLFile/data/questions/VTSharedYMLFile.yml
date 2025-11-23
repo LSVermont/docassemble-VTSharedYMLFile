@@ -359,9 +359,13 @@ content: |
 ---
 template: download_screen_bottom_instructions
 content: |
-  IMPORTANT: Now is the time to download the documents, email or print them, or make a free account to save them. **This tool does not send your forms to the court.** You must file these forms with the court.
+  <h4 style="margin-bottom: 18px;">What do I do next?</h4>
+
+  - Now is the time to download the documents, email or print them, or make a free account to save them.
   
-  Be sure to look at the Next Steps document. It tells you what to do next.
+  - **This tool does not send your forms to the court.** You must file these forms with the court.
+  
+  - Look at the NEXT STEPS document that you downloaded. It tells you how to get your documents to the court. Then it tells you the next steps. It tells you where you can get help if you have a question.
 ---
 template: not_seeing_email
 subject: |
