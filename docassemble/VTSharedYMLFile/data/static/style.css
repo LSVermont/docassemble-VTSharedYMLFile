@@ -43,7 +43,7 @@
   height: 2.5em !important;
 }
 .btn-light {
-    --bs-btn-color: #21455b;
+    --bs-btn-color: #21455b !important;
 }
 /* This below is used to indent "show if" subquestions on certain pages */
 .indent-me-container {
