@@ -42,6 +42,9 @@
 .btn-da-custom svg { 
   height: 2.5em !important;
 }
+.btn-light {
+    --bs-btn-color: #21455b;
+}
 /* This below is used to indent "show if" subquestions on certain pages */
 .indent-me-container {
     background-color: #fff;

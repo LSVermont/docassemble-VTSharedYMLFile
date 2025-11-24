@@ -4,5 +4,5 @@ A docassemble extension.
 
 ## Author
 
-K. Surette, Legal Services Vermont
+K. Surette, VTCourtForms / Legal Services Vermont
 
