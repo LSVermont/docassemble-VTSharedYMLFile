@@ -1,4 +1,4 @@
-# Here are some common code blocks and settings and templates that may get used in all our interviews. Do NOT use it with the RFA interview yet as I've stripped out RFA-specific text below.
+# Here are some common code blocks and settings and templates that may get used in all our interviews.
 
 #####CSS#####
 ---
@@ -308,7 +308,51 @@ content: |
   * Medical support -- Money for child medical care.
   * Maintenance supplement -- Money to correct a difference in the finances of the parents. This can happen if the court thinks the children will have a lower standard of living while living with one parent as compared to the other.
 ---
-
+###RFA-related text templates###
+---
+template: coercive_control
+subject: About coercive control
+content: |
+  Since July 1, 2024, the term “coercive control” is included in the definition of abuse in Vermont. Coercive control is a pattern of behavior that seeks to control what you do or do not do. Coercive control is a form of emotional and psychological abuse. It can hurt your mental and emotional well-being.
+  
+  [Learn more on the VTLawHelp.org website.](https://vtlawhelp.org/coercive-control)
+---
+template: stalking
+subject: About stalking
+content: |
+  Stalking is when a person follows, watches, threatens you or another person, or tampers with your property at least two times and makes you afraid. Stalking includes phone calls, mail, email, comments on social media, faxes and written notes. [Read the law here.](https://legislature.vermont.gov/statutes/section/12/178/05131)
+  
+  Stalking is very complicated. Ask a lawyer about this.
+---
+template: list_of_crimes
+subject: See the list of crimes
+content: |
+  Those crimes are:
+  
+  * murder
+  
+  * attempted murder
+  
+  * kidnapping
+  
+  * domestic assault
+  
+  * aggravated domestic assault
+  
+  * sexual assault
+  
+  * aggravated sexual assault
+  
+  * stalking
+  
+  * aggravated stalking
+  
+  * lewd or lascivious conduct with a child
+  
+  * use of a child in a sexual performance, or
+  
+  * consenting to a sexual performance.
+---
 ######################### Review Screen ######################
 ---
 template: review_screen_instructions
@@ -546,5 +590,6 @@ code: |
   al_custom_error_options = [
     "Visit [VTLawHelp.org](https://vtlawhelp.org) to find legal help.",
     "Get court forms and basic info about court forms and the court process. Reach out to the [Vermont Judiciary's ARC.](https://www.vermontjudiciary.org/self-help/ARC)",
+    "[View the paper version of this form or these forms](${ ORIGINAL_FORMS[0] })",
   ]
 ---
