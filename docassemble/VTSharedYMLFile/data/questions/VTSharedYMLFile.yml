@@ -2,6 +2,9 @@
 
 #####CSS#####
 ---
+include:
+  - docassemble.GithubFeedbackForm:embedded_review.yml
+---
 features:
   css: style.css
 ---
