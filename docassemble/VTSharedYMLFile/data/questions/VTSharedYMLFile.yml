@@ -1,20 +1,29 @@
 # Here are some common code blocks and settings and templates that may get used in all our interviews.
-
-#####CSS#####
+---
+#####Feedback form#####
+# use our customized feedback form
+---
+code: |   
+  feedback_form = "docassemble.VTFeedback:VTfeedback.yml"
+---
+#####Feedback review widget - thumbs up, thumbs down#####
 ---
 include:
   - docassemble.GithubFeedbackForm:embedded_review.yml
+---
+code: |
+  thumbs_display="Did this tool help you?"
+  review_display="Thank you for your feedback. Optional: Let us know what we could do better."
+  submit_review_button="Submit"
+  post_review_display="Thank you!"
+---
+#####CSS#####
 ---
 features:
   css: style.css
 ---
 modules:
   - .accordion
----
-#####Feedback form#####
-# use our customized feedback form
-code: |   
-  feedback_form = "docassemble.VTFeedback:VTfeedback.yml"
 ---
 #####Courts#####
 #The default is to use courts_list.xlsx (it includes only family courts). However, in the Fee Waiver interview, we use courts_list_full.xlsx (it includes all divisions). Both files are stored here.
