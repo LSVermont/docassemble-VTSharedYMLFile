@@ -12,7 +12,7 @@ include:
   - docassemble.GithubFeedbackForm:embedded_review.yml
 ---
 code: |
-  thumbs_up_thumbs_down_review = only_once_review_widget(thumbs_display="Did this tool help you?", review_display="Thank you for your feedback. Optional: Let us know what we could do better.", submit_review_button="Submit", post_review_display="Thank you!")
+  thumbs_up_thumbs_down_review = only_once_review_widget(thumbs_display="Did this tool help you?", review_display="Thank you for your feedback. OPTIONAL: Let us know what we could do better.", submit_review_button="Submit", post_review_display="Thank you!")
 ---
 #####CSS#####
 ---
