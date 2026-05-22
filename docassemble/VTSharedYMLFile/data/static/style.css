@@ -25,11 +25,11 @@
 
 .labelauty-checked a {
     color: #ffffff;
-    background-color: #B85E14 !important;
 }
 
-.card.card-body.pb-1.bg-light a {
+.card.card-body.bg-light.pb-1 a {
     color: #0256D4;
+    background-color: #B85E14 !important;
 }
 
 
