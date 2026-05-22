@@ -51,13 +51,10 @@
     color: #000 !important;
 }
 
-.al_display_template .al_toggle .labelauty-unchecked a {
-    color: #000 !important;
+.al_display_template .al_toggle a {
+    color: #B85E14 !important;
 }
 
-.al_display_template .al_toggle .labelauty-checked a {
-    color: #fff !important;
-}
 
 
 /* This below is used to indent "show if" subquestions on certain pages */
