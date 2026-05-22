@@ -50,7 +50,7 @@
 
 
 /* This below is used to have good contrast with dropdown panels of info text inside questions -- whether the text is white or black */
-.al_display_template.scrollable-panel, .al_display_template .scrollable-panel {
+.al_display_template.scrollable-panel.card.card-body.bg-light {
     background-color: #B85E14 !important;
 }
 
