@@ -51,8 +51,9 @@
     color: #000 !important;
 }
 
-.al_display_template .al_toggle a {
+.al_display_template a.al_toggle {
     color: #B85E14 !important;
+    margin:.3rem 0;
 }
 
 
