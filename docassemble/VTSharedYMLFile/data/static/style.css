@@ -46,9 +46,13 @@
 
 
 /* This below is used to have good contrast with dropdown panels of info text inside questions -- whether the text is white or black */
-.al_display_template .scrollable-panel.bg-light {
+.al_display_template .scrollable-panel.card.card-body.bg-light.pb-1 {
     background-color: #B85E14 !important;
 }
+.al_display_template .al_toggle .labelauty-checked a {
+    color: #B85E14 !important;
+}
+
 
 /* This below is used to indent "show if" subquestions on certain pages */
 .indent-me-container {
