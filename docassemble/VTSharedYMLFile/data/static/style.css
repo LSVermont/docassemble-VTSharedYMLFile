@@ -25,6 +25,7 @@
 
 .labelauty-checked a {
     color: #ffffff;
+    background-color: #B85E14 !important;
 }
 
 .card.card-body.pb-1.bg-light a {
@@ -46,6 +47,13 @@
     --bs-btn-color: #21455b !important;
     --bs-btn-bg: #eff6fb !important;
 }
+
+
+/* This below is used to have good contrast with dropdown panels of info text inside questions -- whether the text is white or black */
+.al_display_template.scrollable-panel, .al_display_template .scrollable-panel {
+    background-color: #B85E14 !important;
+}
+
 /* This below is used to indent "show if" subquestions on certain pages */
 .indent-me-container {
     background-color: #fff;
