@@ -27,9 +27,6 @@
     color: #ffffff;
 }
 
-.card.card-body.pb-1.bg-light a {
-    color: #0256D4;
-}
 
 
 /* This below is just for the VTCourtFormsRootPage */
@@ -46,6 +43,22 @@
     --bs-btn-color: #21455b !important;
     --bs-btn-bg: #eff6fb !important;
 }
+
+
+/* This below is used to have good contrast with dropdown panels of info text inside questions */
+.al_display_template .scrollable-panel.card.card-body.bg-light.pb-1 {
+    background-color: #B85E14 !important;
+    color: #000 !important;
+}
+
+.labelauty-unchecked .al_display_template a.al_toggle,
+.labelauty-checked .al_display_template a.al_toggle {
+    color: #B85E14 !important;
+    margin:.3rem 0;
+}
+
+
+
 /* This below is used to indent "show if" subquestions on certain pages */
 .indent-me-container {
     background-color: #fff;
