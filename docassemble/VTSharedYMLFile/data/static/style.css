@@ -46,13 +46,17 @@
 
 /* This below is used to have good contrast with dropdown panels of info text inside questions */
 .al_display_template .scrollable-panel.card.card-body.bg-light.pb-1 {
-    background-color: #B85E14 !important;
+    background-color: #f2f2f3 !important;
     color: #000 !important;
 }
 
-.labelauty-unchecked .al_display_template a.al_toggle,
+.labelauty-unchecked .al_display_template a.al_toggle {
+    color: #2e4362 !important;
+    margin:.3rem 0;
+}
+
 .labelauty-checked .al_display_template a.al_toggle {
-    color: #B85E14 !important;
+    color: #ffffff !important;
     margin:.3rem 0;
 }
 
