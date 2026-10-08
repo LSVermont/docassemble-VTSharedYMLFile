@@ -14,6 +14,17 @@ include:
 code: |
   thumbs_up_thumbs_down_review = only_once_review_widget(thumbs_display="Did this tool help you?", review_display="Thank you for your feedback. OPTIONAL: Let us know what we could do better.", submit_review_button="Submit", post_review_display="Thank you!")
 ---
+#####Capture user start time and end time. Cannot use just 'start time' because it's a function.#####
+---
+code: |
+  VT_start_time = current_datetime()
+---
+code: |
+  VT_end_time = current_datetime()
+---
+code: |
+  elapsed = date_difference(starting=VT_start_time, ending=VT_end_time)
+---
 #####CSS#####
 ---
 features:
