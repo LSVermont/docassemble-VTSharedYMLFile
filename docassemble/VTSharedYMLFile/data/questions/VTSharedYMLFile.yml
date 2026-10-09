@@ -268,7 +268,7 @@ content: |
 # used when the user will always be the one signing
 id: Signing your forms
 if: |
-  not showifdef("use_representative_signature", False)
+  not showifdef("ask_about_representative_signature", False)
 question: |
   Attestation and signature
 subquestion: |
