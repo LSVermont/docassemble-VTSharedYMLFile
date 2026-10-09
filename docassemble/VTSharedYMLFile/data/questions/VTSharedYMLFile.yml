@@ -30,8 +30,8 @@ code: |
 features:
   css: style.css
 ---
-modules:
-  - .accordion
+#modules:
+#  - .accordion
 ---
 #####Courts#####
 #The default is to use courts_list.xlsx (it includes only family courts). However, in the Fee Waiver interview, we use courts_list_full.xlsx (it includes all divisions). Both files are stored here.
@@ -264,7 +264,11 @@ content: |
 ---
 #####Attestation and signature#####
 ---
+# normal user attestation and signature screen
+# used when the user will always be the one signing
 id: Signing your forms
+if: |
+  not showifdef("use_representative_signature", False)
 question: |
   Attestation and signature
 subquestion: |
@@ -288,6 +292,54 @@ fields:
        
        **Tap Next to choose how to sign your documents.**
      show if: attestation
+---
+# representative attestation and signature screen
+# used when there could be a representative signing on behalf of the user
+id: representative signature date
+if: |
+  showifdef("ask_about_representative_signature", False)
+question: |
+  Attestation and signature
+subquestion: |
+  You must agree to this statement before you can sign your documents. Check the box to agree.
+fields:
+  - "I declare that my statements are true and accurate to the best of my knowledge and belief. I understand that if my statements are false, I will be subject to the penalty of perjury or to other sanctions in the discretion of the court.": attestation
+    datatype: yesno
+  - Check this box if you are the guardian, power of attorney, conservator, or other legal representative for ${ users[0] } and you are signing these documents instead of ${ users[0] }.: guardian_poa_conservator
+    datatype: yesno
+    required: False
+    show if: attestation
+  - Please enter your name: representative_name
+    show if: guardian_poa_conservator
+  - I am the: representative_role
+    input type: radio
+    choices:
+      - Guardian: Guardian
+      - Power of Attorney: Power of Attorney
+      - Conservator: Conservator
+      - Other legal representative: Other legal representative
+    show if: guardian_poa_conservator
+  - "This is how your name will appear under your signature.": printed_signature
+    default: |
+      ${ users[0].name }
+    maxlength: 34
+    show if:
+      variable: guardian_poa_conservator
+      is: False
+  - "Date of your signature for these forms": signature_date
+    show if: attestation
+    datatype: date
+    required: False
+    default: |
+      ${ today() }
+  - note: |
+      You can change this date later if you want.
+
+      **Tap Next to choose how to sign your documents.**
+    show if: attestation
+validation code: |
+  if guardian_poa_conservator:
+    printed_signature = f"{representative_name}, {representative_role} of {users[0]}"
 ---
 ######Some family-related templates######
 template: what_is_legal_parental_rights
