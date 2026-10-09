@@ -341,6 +341,34 @@ validation code: |
   if guardian_poa_conservator:
     printed_signature = f"{representative_name}, {representative_role} of {users[0]}"
 ---
+# overrides for signature screens so that they show a representative name when appropriate
+---
+id: persons signature
+generic object: ALIndividual
+question: |
+  ${ representative_name if showifdef("guardian_poa_conservator", False) else x }, please sign below
+signature: x.signature
+under: |
+  ${ representative_name if showifdef("guardian_poa_conservator", False) else x }
+validation code: |
+  if showifdef("guardian_poa_conservator", False):
+    x.signature.alt_text = f"Signature of {representative_name}"
+  else:
+    x.signature.alt_text = f"Signature of {x.name_full()}"
+---
+id: typed signature question
+generic object: ALIndividual
+question: |
+  ${ representative_name if showifdef("guardian_poa_conservator", False) else x }, sign by typing your name below
+fields:
+  - ${ al_typed_signature_prefix }: x.typed_signature
+    default: ${ representative_name if showifdef("guardian_poa_conservator", False) else x }
+---
+if: |
+  showifdef("guardian_poa_conservator", False)
+code: |
+  slash_s_example_name = representative_name
+---
 ######Some family-related templates######
 template: what_is_legal_parental_rights
 subject: |
