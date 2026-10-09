@@ -30,8 +30,8 @@ code: |
 features:
   css: style.css
 ---
-#modules:
-#  - .accordion
+modules:
+  - .accordion
 ---
 #####Courts#####
 #The default is to use courts_list.xlsx (it includes only family courts). However, in the Fee Waiver interview, we use courts_list_full.xlsx (it includes all divisions). Both files are stored here.
