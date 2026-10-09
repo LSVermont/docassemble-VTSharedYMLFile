@@ -264,7 +264,11 @@ content: |
 ---
 #####Attestation and signature#####
 ---
+# normal user attestation and signature screen
+# used when the user will always be the one signing
 id: Signing your forms
+if: |
+  not showifdef("ask_about_representative_signature", False)
 question: |
   Attestation and signature
 subquestion: |
@@ -288,6 +292,108 @@ fields:
        
        **Tap Next to choose how to sign your documents.**
      show if: attestation
+---
+# representative attestation and signature screen
+# used when there could be a representative signing on behalf of the user
+id: representative signature date
+if: |
+  showifdef("ask_about_representative_signature", False)
+question: |
+  Attestation and signature
+subquestion: |
+  You must agree to this statement before you can sign your documents. Check the box to agree.
+fields:
+  - "I declare that my statements are true and accurate to the best of my knowledge and belief. I understand that if my statements are false, I will be subject to the penalty of perjury or to other sanctions in the discretion of the court.": attestation
+    datatype: yesno
+  - Check this box if you are the guardian, power of attorney, conservator, or other legal representative for ${ users[0] } and you are signing these documents instead of ${ users[0] }.: guardian_poa_conservator
+    datatype: yesno
+    required: False
+    show if: attestation
+  - Please enter your name: representative_name
+    show if: guardian_poa_conservator
+  - I am the: representative_role
+    input type: radio
+    choices:
+      - Guardian: Guardian
+      - Power of Attorney: Power of Attorney
+      - Conservator: Conservator
+      - Other legal representative: Other legal representative
+    show if: guardian_poa_conservator
+  - "This is how your name will appear under your signature.": printed_signature
+    default: |
+      ${ users[0].name }
+    maxlength: 34
+    show if:
+      variable: guardian_poa_conservator
+      is: False
+  - "Date of your signature for these forms": signature_date
+    show if: attestation
+    datatype: date
+    required: False
+    default: |
+      ${ today() }
+  - note: |
+      You can change this date later if you want.
+
+      **Tap Next to choose how to sign your documents.**
+    show if: attestation
+  - note: |
+      This will be printed with your signature on the forms:
+
+      **<span id="representative-name-preview"></span>, <span id="representative-role-preview"></span> of ${ users[0] }**
+
+      Continue to sign...
+    show if: guardian_poa_conservator
+validation code: |
+  if guardian_poa_conservator:
+    printed_signature = f"{representative_name}, {representative_role} of {users[0]}"
+
+script: |
+  <script>
+    // Show the representative's current name and role in the signature preview.
+    function updateRepresentativePreview() {
+      $("#representative-name-preview").text(
+        val("representative_name") || "[Your name]"
+      );
+      $("#representative-role-preview").text(
+        val("representative_role") || "[Your role]"
+      );
+    }
+
+    // Update the preview when someone types or changes a selection.
+    $("#daform").on("input change", "input", updateRepresentativePreview);
+
+    // Fill the preview when the screen opens, including previously entered answers.
+    updateRepresentativePreview();
+  </script>
+---
+# overrides for signature screens so that they show a representative name when appropriate
+---
+id: persons signature
+generic object: ALIndividual
+question: |
+  ${ representative_name if showifdef("guardian_poa_conservator", False) else x }, please sign below
+signature: x.signature
+under: |
+  ${ representative_name if showifdef("guardian_poa_conservator", False) else x }
+validation code: |
+  if showifdef("guardian_poa_conservator", False):
+    x.signature.alt_text = f"Signature of {representative_name}"
+  else:
+    x.signature.alt_text = f"Signature of {x.name_full()}"
+---
+id: typed signature question
+generic object: ALIndividual
+question: |
+  ${ representative_name if showifdef("guardian_poa_conservator", False) else x }, sign by typing your name below
+fields:
+  - ${ al_typed_signature_prefix }: x.typed_signature
+    default: ${ representative_name if showifdef("guardian_poa_conservator", False) else x }
+---
+if: |
+  showifdef("guardian_poa_conservator", False)
+code: |
+  slash_s_example_name = representative_name
 ---
 ######Some family-related templates######
 template: what_is_legal_parental_rights
