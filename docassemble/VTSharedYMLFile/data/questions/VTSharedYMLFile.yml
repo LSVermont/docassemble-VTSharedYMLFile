@@ -337,9 +337,35 @@ fields:
 
       **Tap Next to choose how to sign your documents.**
     show if: attestation
+  - note: |
+      This will be printed with your signature on the forms:
+
+      **<span id="representative-name-preview"></span>, <span id="representative-role-preview"></span> of ${ users[0] }**
+
+      Continue to sign...
+    show if: guardian_poa_conservator
 validation code: |
   if guardian_poa_conservator:
     printed_signature = f"{representative_name}, {representative_role} of {users[0]}"
+
+script: |
+  <script>
+    // Show the representative's current name and role in the signature preview.
+    function updateRepresentativePreview() {
+      $("#representative-name-preview").text(
+        val("representative_name") || "[Your name]"
+      );
+      $("#representative-role-preview").text(
+        val("representative_role") || "[Your role]"
+      );
+    }
+
+    // Update the preview when someone types or changes a selection.
+    $("#daform").on("input change", "input", updateRepresentativePreview);
+
+    // Fill the preview when the screen opens, including previously entered answers.
+    updateRepresentativePreview();
+  </script>
 ---
 # overrides for signature screens so that they show a representative name when appropriate
 ---
